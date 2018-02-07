@@ -1,0 +1,28 @@
+{
+  "name": "duiba-minipgm",
+  "version": "1.0.0",
+  "description": "wechat minigrogram duiba credits mall demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "duiba",
+    "wechat",
+    "miniprogram",
+    "credits",
+    "malll",
+    "demo"
+  ],
+  "author": "tonyfxt",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "mime": "^2.2.0",
+    "mz": "^2.7.0",
+    "nunjucks": "^3.0.1"
+  }
+}
