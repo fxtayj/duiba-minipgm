@@ -1,9 +1,9 @@
-const md5 = require('../utils/signTools/md5');
+const md5 = require('../utils/signTools/md5')
+const config = require('../config/config')
 
 const prefix = 'https://home.m.duiba.com.cn/autoLogin/autologin?';
-const appKey = 'xcwb4dwGLtoX5N94zmrwh1JHLW3';
-const appSecret = '3PbR3H9mXqZnLtPTFJqYnFuaayNj';
-// const testurl = 'http://localhost:3000/duiba/inner4me?uid=fxt&credits=1000&dbredirect=http%3a%2f%2ftrade.m.duiba.com.cn%2fcrecord%2frecord';
+const appKey = config.duiba.appKey
+const appSecret = config.duiba.appSecret
 
 let autoLogin = async(ctx, next) => {
   let uid = ctx.request.query['uid'] || 'duiba';

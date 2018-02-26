@@ -4,7 +4,8 @@
   "description": "wechat minigrogram duiba credits mall demo",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "export NODE_ENV=development&& nodemon --harmony --use_strict app.js",
+    "prod": "pm2 start pm2.json --env production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,7 +23,11 @@
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0",
     "mime": "^2.2.0",
+    "mysql": "^2.15.0",
     "mz": "^2.7.0",
-    "nunjucks": "^3.0.1"
+    "nunjucks": "^3.0.1",
+    "sequelize": "^4.33.2"
+  },"devDependencies": {
+    "nodemon": "^1.15.1"
   }
 }
