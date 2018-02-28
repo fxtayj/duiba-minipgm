@@ -1,5 +1,6 @@
 const config = {
     db: {
+        dialect: 'mysql',
         database: 'duiba_mp', // 使用哪个数据库
         username: 'duiba', // 用户名
         password: 'duiba2018', // 口令

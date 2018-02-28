@@ -23,11 +23,13 @@
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0",
     "mime": "^2.2.0",
-    "mysql": "^2.15.0",
+    "mysql2": "^1.5.2",
     "mz": "^2.7.0",
+    "node-uuid": "^1.4.8",
     "nunjucks": "^3.0.1",
     "sequelize": "^4.33.2"
-  },"devDependencies": {
+  },
+  "devDependencies": {
     "nodemon": "^1.15.1"
   }
 }

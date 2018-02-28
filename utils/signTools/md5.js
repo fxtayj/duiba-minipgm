@@ -34,11 +34,8 @@ let signVerify = (params,sign) => {
   for (let value of sortParams.values()) {
     signStr += value;
   }
-  console.log(signStr)
   hash.update(signStr)
   var signV = hash.digest('hex')
-  console.log(sign)
-  console.log(signV)
   return signV == sign;
 }
 
