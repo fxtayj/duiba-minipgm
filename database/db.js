@@ -29,7 +29,7 @@ var sequelize = new Sequelize(config.db.database, config.db.username, config.db.
   }
 });
 
-const ID_TYPE = Sequelize.STRING(50);
+const ID_TYPE = Sequelize.STRING(40);
 
 function defineModel(name, attributes) {
   var attrs = {};

@@ -31,7 +31,6 @@ let createOrder = async(orderObj={}) => {
     params,
     finished
   } = orderObj;
-  finished = false
   let newOrder = await Orders.create({
     uid,
     credits,
@@ -45,10 +44,10 @@ let createOrder = async(orderObj={}) => {
   return newOrder;
 }
 
-let updateOrder = async(orderEntity) => {
-  orderEntity.updatedAt = Date.now();
-  orderEntity.version ++;
-  return await Orders.save(orderEntity);
+let updateOrder = async(order) => {
+  order.updatedAt = Date.now();
+  order.version ++;
+  return await order.save();
 }
 
 module.exports = {

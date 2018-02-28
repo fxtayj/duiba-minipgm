@@ -12,5 +12,8 @@ module.exports = db.defineModel('orders', {
     orderNum: db.STRING(100),
     type: db.STRING(40),
     params: db.STRING(100),
-    finished: db.BOOLEAN
+    finished: {
+        type: db.BOOLEAN,
+        defaultValue: false
+    }
 });

@@ -23,11 +23,11 @@ let notify = async (ctx, next) => {
     }
     if (!md5.signVerify(params, signParam)) {
         ctx.body = '签名验证不通过'
-    }else{
+    } else {
         //TODO  根据orderNum反查扣积分订单信息，如状态是失败就返还用户积分，否则返回ok
         let order = await ordersDAO.findOneByOrderNum(requestQuery.orderNum)
-        if(order && !order.finished){
-            if(!requestQuery.success){
+        if (order && !order.finished) {
+            if (requestQuery.success == 'false') {
                 let user = await usersDAO.findOneByUid(order.uid)
                 user.credits = user.credits + order.credits
                 await usersDAO.updateUser(user)
@@ -35,7 +35,7 @@ let notify = async (ctx, next) => {
             order.finished = true
             await ordersDAO.updateOrder(order)
             ctx.body = 'ok'
-        }else {
+        } else {
             ctx.body = '订单不存在或已处理'
         }
     }
