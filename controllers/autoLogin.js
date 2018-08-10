@@ -2,7 +2,7 @@ const md5 = require('../utils/signTools/md5')
 const config = require('../config/config')
 const usersDAO = require('../dao/UsersDAO')
 
-const prefix = 'https://home.m.duiba.com.cn/autoLogin/autologin?';
+const prefix = 'https://www.duiba.com.cn/autoLogin/autologin?';
 const appKey = config.duiba.appKey
 const appSecret = config.duiba.appSecret
 
